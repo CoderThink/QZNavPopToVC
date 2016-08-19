@@ -9,3 +9,4 @@ step2:
 [self.navigationController popToVCWithClass:[ToController class] withSelfNav:self.navigationController animated:YES];
 
 没有做viewControllers中没有想要去的vc处理
+成功失败返回BOOL值
