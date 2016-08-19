@@ -10,13 +10,15 @@
 
 @implementation UINavigationController (QZPopToVC)
 
-- (void)popToVCWithClass:(Class)toClass withSelfNav:(UINavigationController *)nav animated:(BOOL)animate
+- (BOOL)popToVCWithClass:(Class)toClass withSelfNav:(UINavigationController *)nav animated:(BOOL)animate
 {
     for (UIViewController *vc in nav.viewControllers) {
         if ([vc isKindOfClass:toClass]) {
             [nav popToViewController:vc animated:animate];
+            return YES;
         }
     }
+    return NO;
 }
 
 @end
