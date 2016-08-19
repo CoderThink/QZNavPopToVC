@@ -10,6 +10,6 @@
 
 @interface UINavigationController (QZPopToVC)
 
-- (void)popToVCWithClass:(Class)toClass withSelfNav:(UINavigationController *)nav;
+- (void)popToVCWithClass:(Class)toClass withSelfNav:(UINavigationController *)nav animated:(BOOL)animate;
 
 @end

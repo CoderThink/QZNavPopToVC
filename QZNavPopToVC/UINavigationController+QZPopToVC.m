@@ -10,15 +10,13 @@
 
 @implementation UINavigationController (QZPopToVC)
 
-- (void)popToVCWithClass:(Class)toClass withSelfNav:(UINavigationController *)nav;
+- (void)popToVCWithClass:(Class)toClass withSelfNav:(UINavigationController *)nav animated:(BOOL)animate
 {
-    NSInteger index = 0;
-    for (NSInteger i = 0 ; i < nav.viewControllers.count;i++) {
-        if ([[nav.viewControllers objectAtIndex:i] isKindOfClass:toClass]) {
-            index = i;
+    for (UIViewController *vc in nav.viewControllers) {
+        if ([vc isKindOfClass:toClass]) {
+            [nav popToViewController:vc animated:animate];
         }
     }
-    [nav popToViewController:[nav.viewControllers objectAtIndex:index] animated:YES];
 }
 
 @end
