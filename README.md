@@ -6,7 +6,7 @@ index返回会跳到错误界面
 step1:
 #import "UINavigationController+QZPopToVC.h"
 step2:
-[self.navigationController popToVCWithClass:[ToController class] withSelfNav:self.navigationController animated:YES];
+[self.navigationController popToViewControllerWithClass:[ViewController class] animated:YES];
 
 没有做viewControllers中没有想要去的vc处理
 成功失败返回BOOL值
