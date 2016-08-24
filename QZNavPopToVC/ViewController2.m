@@ -24,8 +24,6 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-//    [self.navigationController popToVCWithClass:[ViewController class] withSelfNav:self.navigationController animated:YES];
-    // A new method, it's more convenient.
     [self.navigationController popToViewControllerWithClass:[ViewController class] animated:YES];
 }
 - (void)didReceiveMemoryWarning {
