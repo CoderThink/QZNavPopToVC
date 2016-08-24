@@ -21,4 +21,14 @@
     return NO;
 }
 
+- (BOOL)popToViewControllerWithClass:(Class)toClass animated:(BOOL)animated {
+    for (UIViewController *controller in self.viewControllers) {
+        if ([controller isKindOfClass:toClass]) {
+            [self popToViewController:controller animated:animated];
+            return YES;
+        }
+    }
+    return NO;
+}
+
 @end
